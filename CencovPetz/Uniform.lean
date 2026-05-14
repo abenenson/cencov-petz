@@ -39,7 +39,7 @@ def IsUniform {α : Type u} [Fintype α] (p : α → ℝ) : Prop :=
   ∀ a : α, p a = uniformDistribution (α := α) a
 
 /-- The uniform distribution sums to `1`. -/
-theorem uniformDistribution_sum_one {α : Type u} [Fintype α] [Nonempty α] :
+lemma uniformDistribution_sum_one {α : Type u} [Fintype α] [Nonempty α] :
     (∑ a : α, uniformDistribution (α := α) a) = 1 := by
   classical
   have hcard : (Fintype.card α : ℝ) ≠ 0 := by

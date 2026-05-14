@@ -258,7 +258,7 @@ private lemma tendsto_approx (p : Simplex α) :
   rw [nhds_induced]
   simpa [Function.comp] using (tendsto_approx_p (p := p))
 
-theorem dense_setOf_isRational : Dense {p : Simplex α | IsRational (α := α) p} := by
+lemma dense_setOf_isRational : Dense {p : Simplex α | IsRational (α := α) p} := by
   classical
   intro p
   refine mem_closure_of_tendsto (tendsto_approx (p := p)) ?_

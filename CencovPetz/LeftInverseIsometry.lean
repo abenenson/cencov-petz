@@ -29,7 +29,7 @@ universe u
 
 namespace MonotoneMetricFamily
 
-theorem comp_eq_of_left_inverse (G : MonotoneMetricFamily) {α β : Type u} [Fintype α] [Fintype β]
+lemma comp_eq_of_left_inverse (G : MonotoneMetricFamily) {α β : Type u} [Fintype α] [Fintype β]
     (κ : MarkovMorphism α β) (κ' : MarkovMorphism β α) (p : Simplex α)
     (hp : κ'.pushforward (κ.pushforward p) = p)
     (ht : ∀ u : tangentSpace (α := α), κ'.tangentPushforward (κ.tangentPushforward u) = u) :
@@ -67,7 +67,7 @@ theorem comp_eq_of_left_inverse (G : MonotoneMetricFamily) {α β : Type u} [Fin
     simp [LinearMap.BilinForm.comp_apply, MarkovMorphism.tangentPushforwardLinear_apply, hEq]
   exact LinearMap.BilinForm.ext_of_isSymm hSymm₁ hSymm₂ hdiag
 
-theorem eq_of_left_inverse (G : MonotoneMetricFamily) {α β : Type u} [Fintype α] [Fintype β]
+lemma eq_of_left_inverse (G : MonotoneMetricFamily) {α β : Type u} [Fintype α] [Fintype β]
     (κ : MarkovMorphism α β) (κ' : MarkovMorphism β α) (p : Simplex α)
     (hp : κ'.pushforward (κ.pushforward p) = p)
     (ht : ∀ u : tangentSpace (α := α), κ'.tangentPushforward (κ.tangentPushforward u) = u)

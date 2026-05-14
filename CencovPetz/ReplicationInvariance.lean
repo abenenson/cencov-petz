@@ -24,7 +24,7 @@ variable {α : Type u} [Fintype α]
 
 namespace MonotoneMetricFamily
 
-theorem comp_eq_of_replicate (G : MonotoneMetricFamily) (m : ℕ) (hm : 0 < m) (p : Simplex α) :
+lemma comp_eq_of_replicate (G : MonotoneMetricFamily) (m : ℕ) (hm : 0 < m) (p : Simplex α) :
     (G.g (α := α × Fin m) ((MarkovMorphism.replicate (α := α) m hm).pushforward p)).comp
         ((MarkovMorphism.replicate (α := α) m hm).tangentPushforwardLinear)
         ((MarkovMorphism.replicate (α := α) m hm).tangentPushforwardLinear)
@@ -42,7 +42,7 @@ theorem comp_eq_of_replicate (G : MonotoneMetricFamily) (m : ℕ) (hm : 0 < m) (
       MarkovMorphism.coarsen_tangentPushforward_replicate
         (α := α) (m := m) (hm := hm) (u := u)
 
-theorem eq_of_replicate (G : MonotoneMetricFamily) (m : ℕ) (hm : 0 < m) (p : Simplex α)
+lemma eq_of_replicate (G : MonotoneMetricFamily) (m : ℕ) (hm : 0 < m) (p : Simplex α)
     (u v : tangentSpace (α := α)) :
     G.g (α := α × Fin m) ((MarkovMorphism.replicate (α := α) m hm).pushforward p)
         ((MarkovMorphism.replicate (α := α) m hm).tangentPushforward u)

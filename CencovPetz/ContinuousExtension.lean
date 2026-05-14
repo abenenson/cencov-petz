@@ -28,7 +28,7 @@ universe u
 
 variable {α : Type u} [Fintype α]
 
-theorem eq_of_eqOn_dense₂ {s : Set (Simplex α)} (hs : Dense s)
+lemma eq_of_eqOn_dense₂ {s : Set (Simplex α)} (hs : Dense s)
     {f g : Simplex α → tangentSpace (α := α) → tangentSpace (α := α) → ℝ}
     (hf : ∀ u v, Continuous fun p : Simplex α => f p u v)
     (hg : ∀ u v, Continuous fun p : Simplex α => g p u v)

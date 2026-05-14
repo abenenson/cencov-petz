@@ -70,7 +70,7 @@ namespace Bilin
               simp [hu_sum]
     simpa [Basis.dij_coe, sub_eq_add_neg, mul_add, Finset.sum_add_distrib] using h
   set_option maxHeartbeats 250000 in
-  theorem B_eq_smul_fisherBilin_uniform (i0 i1 : Fin n) (hi01 : i0 ≠ i1) :
+  lemma B_eq_smul_fisherBilin_uniform (i0 i1 : Fin n) (hi01 : i0 ≠ i1) :
     B (G := G) (n := n)
       =
         (B (G := G) (n := n) (dij (n := n) i0 i1) (dij (n := n) i0 i1) /

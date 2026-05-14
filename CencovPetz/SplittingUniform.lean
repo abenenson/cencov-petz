@@ -49,7 +49,7 @@ namespace MarkovMorphism
 
 variable {α : Type u} [Fintype α] [Nonempty α]
 
-theorem split_pushforward_eq_uniform_of_apply_eq_div_card (m : α → ℕ) (hm : ∀ a, 0 < m a)
+lemma split_pushforward_eq_uniform_of_apply_eq_div_card (m : α → ℕ) (hm : ∀ a, 0 < m a)
     (p : Simplex α)
     (hp : ∀ a, p.p a = (m a : ℝ) / (Fintype.card (SplitTarget (α := α) m) : ℝ)) :
     letI : Nonempty (SplitTarget (α := α) m) := by

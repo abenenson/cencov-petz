@@ -28,7 +28,7 @@ namespace Simplex
 
 variable {α : Type*} [Fintype α]
 
-theorem continuous_fisherBilin_apply (u v : tangentSpace (α := α)) :
+lemma continuous_fisherBilin_apply (u v : tangentSpace (α := α)) :
     Continuous fun p : Simplex α => fisherBilin p u v := by
   classical
   have hterm :

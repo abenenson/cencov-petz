@@ -56,7 +56,7 @@ def IsRational (p : Simplex α) : Prop :=
     (∀ a, 0 < m a) ∧
       ∀ a, p.p a = (m a : ℝ) / ((∑ a : α, m a : ℕ) : ℝ)
 
-theorem IsRational.isSplitRepresentable {p : Simplex α} (hp : IsRational (α := α) p) :
+lemma IsRational.isSplitRepresentable {p : Simplex α} (hp : IsRational (α := α) p) :
     IsSplitRepresentable (α := α) p := by
   rcases hp with ⟨m, hm, hp⟩
   refine ⟨m, hm, ?_⟩

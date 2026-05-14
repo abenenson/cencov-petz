@@ -25,7 +25,7 @@ variable {α : Type u} [Fintype α]
 
 namespace MonotoneMetricFamily
 
-theorem comp_eq_of_split (G : MonotoneMetricFamily)
+lemma comp_eq_of_split (G : MonotoneMetricFamily)
     (m : α → ℕ) (hm : ∀ a, 0 < m a) (p : Simplex α) :
     (G.g (α := MarkovMorphism.SplitTarget (α := α) m)
         ((MarkovMorphism.split (α := α) m hm).pushforward p)).comp
@@ -47,7 +47,7 @@ theorem comp_eq_of_split (G : MonotoneMetricFamily)
       MarkovMorphism.merge_tangentPushforward_split
         (α := α) (m := m) (hm := hm) (u := u)
 
-theorem eq_of_split (G : MonotoneMetricFamily)
+lemma eq_of_split (G : MonotoneMetricFamily)
     (m : α → ℕ) (hm : ∀ a, 0 < m a) (p : Simplex α)
     (u v : tangentSpace (α := α)) :
     G.g (α := MarkovMorphism.SplitTarget (α := α) m)

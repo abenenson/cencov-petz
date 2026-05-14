@@ -181,7 +181,7 @@ end MarkovMorphism
 
 namespace MonotoneMetricFamily
 
-theorem comp_eq_of_equiv
+lemma comp_eq_of_equiv
     (G : MonotoneMetricFamily) (e : α ≃ β) (p : Simplex α) :
     (G.g (α := β)
         ((MarkovMorphism.deterministic (α := α) (β := β)
@@ -211,7 +211,7 @@ theorem comp_eq_of_equiv
       MarkovMorphism.deterministic_tangentPushforward_comp_symm
         (α := α) (β := β) (e := e) (u := u)
 
-theorem eq_of_equiv
+lemma eq_of_equiv
     (G : MonotoneMetricFamily) (e : α ≃ β) (p : Simplex α)
     (u v : tangentSpace (α := α)) :
     G.g (α := β)

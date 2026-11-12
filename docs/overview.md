@@ -19,4 +19,13 @@ This ordering separates generally useful probability-simplex infrastructure from
 ## Verification
 
 The repository is pinned to Lean and Mathlib in `lean-toolchain` and `lake-manifest.json`.
-The public CI uses `leanprover/lean-action` and docgen.
+CI builds the complete library with warnings treated as errors, then builds its API
+documentation with the matching `doc-gen4` release. Each successful run uploads the
+`api-docs` artifact, including pull requests and manual runs.
+
+To build the API documentation locally after `lake build`, run
+`bash scripts/build-docs.sh`. The output is in `public-docs/docs`.
+
+Publishing is optional: after configuring GitHub Pages to use GitHub Actions, set
+the repository variable `PUBLISH_DOCS` to `true` to deploy documentation on pushes
+to `main`.

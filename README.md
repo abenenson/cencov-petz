@@ -1,5 +1,7 @@
 # cencov-petz
 
+[![Lean Action CI](https://github.com/abenenson/cencov-petz/actions/workflows/lean_action_ci.yml/badge.svg?branch=main)](https://github.com/abenenson/cencov-petz/actions/workflows/lean_action_ci.yml)
+
 Lean 4 proof of the **finite Čencov–Petz uniqueness theorem**: any continuous monotone metric family on the probability simplex is a scalar multiple of the Fisher information metric.
 
 This is the finite/discrete case of the Čencov–Petz characterisation: the Fisher information metric is the unique (up to scale) Riemannian metric on the space of probability distributions monotone under Markov morphisms.
